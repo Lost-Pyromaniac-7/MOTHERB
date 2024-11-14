@@ -76,21 +76,6 @@ public class FirstPersonController : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX); // Rotación del cuerpo del jugador
     }
 
-    // Método para detectar si está tocando una escalera
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Ladder")) // Asegúrate de que la escalera tenga el tag "Ladder"
-        {
-            isClimbing = true; // Activa el modo de escalada
-            velocity.y = 0; // Resetea la velocidad vertical al comenzar a escalar
-        }
-    }
+    
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Ladder"))
-        {
-            isClimbing = false; // Desactiva el modo de escalada al salir de la escalera
-        }
-    }
 }
